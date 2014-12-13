@@ -23,7 +23,7 @@ $(function(){
 
 ## Options
 | Name | Type | Desc |
-|:-----------|:-----------|:------------:|
+|:-----------|:-----------|:------------|
 | target | selector | [.js-selectCustomTarget] ターゲットとなるselect要素 |
 | trigger | selector | [.js-selectCustomTigger] リスト表示トリガー |
 | valueClass | selector | [.select-value] 値格納要素のclass |
