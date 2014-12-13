@@ -1,0 +1,70 @@
+.select {
+  margin-bottom: 30px;
+  position: relative;
+}
+.select i {
+  color: #616161;
+  position: absolute;
+  top: 8px;
+  left: 150px;
+}
+
+.select-value {
+  color: #616161;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  width: 150px;
+  border: 0;
+  border: solid 1px #E0E0E0;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.select-list {
+  font-size: 14px;
+  width: 170px;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: absolute;
+  top: 37px;
+  left: 0;
+  z-index: 1;
+}
+.select-list .select-desc {
+  display: none;
+}
+.select-list .select-active {
+  color: #dcdcdc;
+  background: #F5F5F5;
+}
+.select-list .option-label {
+  color: #616161;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  background: #CFD8DC;
+}
+.select-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.select-list li {
+  color: #777;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 5px 5px 5px 15px;
+  border-bottom: solid 1px #d9d9d9;
+}
+.select-list li + li {
+  padding-top: 5px;
+}
+.select-list li:hover {
+  background: #F5F5F5;
+  transition: 0.2s;
+}
+
+/*# sourceMappingURL=select.css.map */

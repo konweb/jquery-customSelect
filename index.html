@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select custom</title>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/select.css">
+	<style>
+		body{
+			font-family: "RobotoDraft","Roboto",sans-serif;
+			margin: 30px 70px;
+		}
+		h1{
+			color: #009688;
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.section{
+			margin-bottom: 60px;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="GET">
+		<h1>Default</h1>
+		<div class="section">
+		<div class="select js-selectCustom">
+			<select name="select1" class="js-selectCustomTarget">
+				<option value="りんご" selected>りんご</option>
+				<option value="ばなな">ばなな</option>
+				<option value="オレンジ">オレンジ</option>
+				<option value="みかん">みかん</option>
+				<option value="ピーチ">ピーチ</option>
+			</select>
+			<i class="fa fa-angle-down js-selectCustomTigger"></i>
+		</div><!-- select -->
+	</div><!-- section -->
+
+		<h1>OptGroup</h1>
+		<div class="section">
+			<div class="select js-selectCustom">
+				<select name="select2" class="js-selectCustomTarget">
+					<optgroup label="Fruit">
+						<option label="さくらんぼ" value="sakura" selcted="selcted">さくらんぼ</option>
+						<option label="ぶどう" value="budou">ぶどう</option>
+						<option label="みかん" value="mikan">みかん</option>
+						<option label="メロン" value="melon">メロン</option>
+						<option label="りんご" value="ringo">りんご</option>
+					</optgroup>
+					<optgroup label="Animal">
+						<option value="ウサギ">ウサギ</option>
+						<option value="カメ">カメ</option>
+						<option value="カバ">カバ</option>
+						<option value="キリン">キリン</option>
+						<option value="ゴリラ">ゴリラ</option>
+						<option value="シマウマ">シマウマ</option>
+						<option value="ゾウ">ゾウ</option>
+						<option value="ライオン">ライオン</option>
+					</optgroup>
+				</select>
+				<i class="fa fa-angle-down"></i>
+			</div><!-- select -->
+		</div><!-- select -->
+
+		<h1>Label Description</h1>
+		<div class="section">
+		<div class="select js-selectCustom">
+			<select name="select3" class="js-selectCustomTarget">
+				<option class="select-desc" selected>選択してください</option>
+				<option value="りんご">りんご</option>
+				<option value="ばなな">ばなな</option>
+				<option value="オレンジ">オレンジ</option>
+				<option value="みかん">みかん</option>
+				<option value="ピーチ">ピーチ</option>
+			</select>
+			<i class="fa fa-angle-down js-selectCustomTigger"></i>
+		</div><!-- select -->
+	</div><!-- section -->
+
+		<h1>Option : Slide</h1>
+		<div class="section">
+		<div class="select js-selectCustom">
+			<select name="select4" class="js-selectCustomTarget">
+				<option class="select-desc" selected>選択してください</option>
+				<option value="りんご">りんご</option>
+				<option value="ばなな">ばなな</option>
+				<option value="オレンジ">オレンジ</option>
+				<option value="みかん">みかん</option>
+				<option value="ピーチ">ピーチ</option>
+			</select>
+			<i class="fa fa-angle-down js-selectCustomTigger"></i>
+		</div><!-- select -->
+	</div><!-- section -->
+
+		<h1>Option : Fade</h1>
+		<div class="section">
+		<div class="select js-selectCustom">
+			<select name="select5" class="js-selectCustomTarget">
+				<option class="select-desc" selected>選択してください</option>
+				<option value="りんご">りんご</option>
+				<option value="ばなな">ばなな</option>
+				<option value="オレンジ">オレンジ</option>
+				<option value="みかん">みかん</option>
+				<option value="ピーチ">ピーチ</option>
+			</select>
+			<i class="fa fa-angle-down js-selectCustomTigger"></i>
+		</div><!-- select -->
+	</div><!-- section -->
+
+		<input type="submit" value="Send">
+	</form>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./js/customSelect.js"></script>
+	<script>
+	$(function(){
+		$(".js-selectCustom").eq(0).customSelect({});
+		$(".js-selectCustom").eq(1).customSelect({});
+		$(".js-selectCustom").eq(2).customSelect({});
+		$(".js-selectCustom").eq(3).customSelect({
+			display: "slide"
+		});
+		$(".js-selectCustom").eq(4).customSelect({
+			display: "fade"
+		});
+	});
+	</script>
+</body>
+</html>
