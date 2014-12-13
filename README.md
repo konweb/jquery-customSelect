@@ -1,11 +1,7 @@
 jquery-customSelect
 ===================
 
-<<<<<<< HEAD
-[example](http://konweb.github.io/jquery.customSelect/)
-=======
-MIT license. [example](http://konweb.github.io/jquery.customSelect/)
->>>>>>> master
+MIT license. [example](http://konweb.github.io/jquery-customSelect/)
 
 ## How to use
 read the JS and CSS files
@@ -21,7 +17,7 @@ run the plug -in
 
 ```
 $(function(){
-	$(".js-selectCustom").eq(0).customSelect({});
+	$(".js-selectCustom").customSelect({});
 });
 ```
 
