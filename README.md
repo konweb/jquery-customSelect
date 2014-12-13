@@ -1,7 +1,11 @@
 jquery-customSelect
 ===================
 
+<<<<<<< HEAD
 [example](http://konweb.github.io/jquery.customSelect/)
+=======
+MIT license. [example](http://konweb.github.io/jquery.customSelect/)
+>>>>>>> master
 
 ## How to use
 read the JS and CSS files

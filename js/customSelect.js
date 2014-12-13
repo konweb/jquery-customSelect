@@ -1,8 +1,8 @@
 /*!
 * jQuery custom select Library v1.0
-* http://jquery.com/
+* https://github.com/konweb/jquery-customSelect/tree/master
 *
-* Copyright 2005, 2013 jQuery Foundation, Inc. and other contributors
+* Author Naoto Kondo
 * MIT license
 *
 * Date: 2014-012-14 T4:00Z
