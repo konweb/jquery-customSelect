@@ -1,6 +1,8 @@
 jquery-customSelect
 ===================
 
+[example](http://konweb.github.io/jquery.customSelect/)
+
 ## How to use
 read the JS and CSS files
 
@@ -22,12 +24,12 @@ $(function(){
 ## Options
 | Name | Type | Desc |
 |:-----------|:-----------|:------------:|
-| target | selector | This |
-| trigger | selector | column |
-| valueClass | selector | will |
-| listClass | selector | be |
-| selectDesc | selector | center |
-| opLabel | string |   aligned |
-| isActive | string |   aligned |
-| display | string |   aligned |
-| speed | number |   aligned |
+| target | selector | [.js-selectCustomTarget] ターゲットとなるselect要素 |
+| trigger | selector | [.js-selectCustomTigger] リスト表示トリガー |
+| valueClass | selector | [.select-value] 値格納要素のclass |
+| listClass | selector | [.select-list] リスト格納要素のclass |
+| selectDesc | selector | [.select-desc] ラベルを設定したい場合にoption要素に付与するclass |
+| opLabel | string | [option-label] optgroup要素が存在する場合のラベルclass名 |
+| isActive | string | [select-active] 選択状態のclass |
+| display | string | [show] リスト表示方法 show/slide/fade |
+| speed | number | [500] オプションdisplayでslide/fadeを指定した場合のアニメーションスピード |
