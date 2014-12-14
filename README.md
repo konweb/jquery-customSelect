@@ -21,6 +21,73 @@ $(function(){
 });
 ```
 
+Simple HTML
+```
+<div class="select js-selectCustom">
+	<select name="select1" class="js-selectCustomTarget">
+		<option value="りんご" selected>りんご</option>
+		<option value="ばなな">ばなな</option>
+		<option value="オレンジ">オレンジ</option>
+		<option value="みかん">みかん</option>
+		<option value="ピーチ">ピーチ</option>
+	</select>
+	<i class="fa fa-angle-down js-selectCustomTigger"></i>
+</div><!-- select -->
+```
+
+
+Simple HTML
+```
+<div class="select js-selectCustom">
+	<select name="select1" class="js-selectCustomTarget">
+		<option value="" selected>りんご</option>
+		<option value="りんご">りんご</option>
+		<option value="ばなな">ばなな</option>
+		<option value="オレンジ">オレンジ</option>
+		<option value="みかん">みかん</option>
+		<option value="ピーチ">ピーチ</option>
+	</select>
+	<i class="fa fa-angle-down js-selectCustomTigger"></i>
+</div><!-- select -->
+```
+
+HTML if you put a descriptive label
+```
+<div class="select js-selectCustom">
+	<select name="select1" class="js-selectCustomTarget">
+		<option value="" class="select-list">選択してください</option>
+		<option value="りんご">りんご</option>
+		<option value="ばなな">ばなな</option>
+		<option value="オレンジ">オレンジ</option>
+		<option value="みかん">みかん</option>
+		<option value="ピーチ">ピーチ</option>
+	</select>
+	<i class="fa fa-angle-down js-selectCustomTigger"></i>
+</div><!-- select -->
+```
+
+Also supports optgroup
+```
+<div class="section">
+	<div class="select js-selectCustom">
+		<select name="select2" class="js-selectCustomTarget">
+			<optgroup label="Fruit">
+				<option label="さくらんぼ" value="sakura" selcted="selcted">さくらんぼ</option>
+				<option label="ぶどう" value="budou">ぶどう</option>
+				<option label="みかん" value="mikan">みかん</option>
+			</optgroup>
+			<optgroup label="Animal">
+				<option value="ウサギ">ウサギ</option>
+				<option value="カメ">カメ</option>
+				<option value="カバ">カバ</option>
+			</optgroup>
+		</select>
+		<i class="fa fa-angle-down"></i>
+	</div><!-- select -->
+</div><!-- select -->
+```
+
+
 ## Options
 | Name | Type | Desc |
 |:-----------|:-----------|:------------|

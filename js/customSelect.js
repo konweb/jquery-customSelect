@@ -49,7 +49,9 @@ $.fn.customSelect = function(op){
 			 * リストと値エリアの生成
 			*/
 			setList: function(){
-				var setVal;
+				var opGroupNum = $this.find(op.target + " optgroup").length,
+						selectIndex = $this.find(op.target).prop('selectedIndex'),
+						$target,setVal,selected,opNum,label,i,listLabel,count,list = "",attr = "";
 				/*
 				 * すでに選択されているかの判定
 				 * selectDescが存在する場合、selectDescのテキストを取得
@@ -57,11 +59,13 @@ $.fn.customSelect = function(op){
 				*/
 				if($this.find(op.target + " " + op.selectDesc).length > 0){
 					setVal = $this.find(op.target + " " + op.selectDesc).text();
+					$this.find(op.target + " option").prop("selected", false);
 					$this.find(op.target + " " + op.selectDesc).remove();
+					selectIndex = "";
 				}else if($this.find(op.target + " option:selected").text()){
 					setVal = $this.find(op.target + " option:selected").text();
 				}else{
-					setVal = $this.find(op.target + " option:eq(0)").text();
+					setVal = $this.find(op.target + " option").eq(0).text();
 				}
 				/*
 				 * select要素の後に、リストと値エリアの生成
@@ -74,10 +78,6 @@ $.fn.customSelect = function(op){
 				 * リストの中身を生成
 				 * optgroupがある場合とない場合で処理を切り分け
 				*/
-				var opGroupNum = $this.find(op.target + " optgroup").length,
-						selectIndex = $this.find(op.target).prop('selectedIndex'),
-						selected,opNum,label,i,listLabel,count,list = "",attr = "";
-
 				if(opGroupNum > 0){
 					$this.find(op.target + " optgroup").each(function(index){
 						count = 0;
@@ -87,24 +87,25 @@ $.fn.customSelect = function(op){
 						listLabel = "<p class='" + op.opLabel + " " + attr + "' disabled='disabled'>" + label + "</p>";
 
 						for(i = 0;i < opNum;i++){
-							attr = $(this).find("option").eq(count).attr("class") ? $(this).find("option").eq(count).attr("class") : "";
-							selected = $(this).find("option").eq(count).attr("selected");
+							$target = $(this).find("option").eq(count);
+							attr = $target.attr("class") ? $target.attr("class") : "";
+							selected = $target.attr("selected");
 							if(selected == "selected"){
-								list += "<li class='" + op.isActive + " " + attr + "'>" + $(this).find("option:eq(" + count + ")").text() + "</li>";
+								list += "<li class='" + op.isActive + " " + attr + "'>" + $target.text() + "</li>";
 							}else{
-								list += "<li class='" + attr + "'>" + $(this).find("option:eq(" + count + ")").text() + "</li>";
+								list += "<li class='" + attr + "'>" + $target.text() + "</li>";
 							}
 							count++;
 						}
 						$this.find(op.listClass).append(listLabel + "<ul>" + list + "</ul>");
 					});
 				}else{
-					var $target;
 					opNum = $this.find(op.target + " option").length;
 					for(i = 0;i < opNum;i++){
 						$target = $this.find(op.target + " option").eq(i);
 						attr = $target.attr("class") ? $target.attr("class") : "";
-						if(i == selectIndex){
+						selected = $target.attr("selected");
+						if(selected == "selected"){
 							list += "<li class='" + op.isActive + " " + attr + "'>"+$target.text()+"</li>";
 						}else{
 							list += "<li class='"+attr+"'>"+$target.text()+"</li>";
@@ -143,7 +144,7 @@ $.fn.customSelect = function(op){
 				$this.find(op.listClass + " li").removeClass(op.isActive);
 				$(e.target).addClass(op.isActive);
 				$this.find(op.target + " option").prop("selected", false);
-				$this.find(op.target + " option:eq("+index+")").prop("selected", true);
+				$this.find(op.target + " option").eq(index).prop("selected", true);
 				$this.find(op.valueClass).text($(e.target).text());
 				return false;
 			}
