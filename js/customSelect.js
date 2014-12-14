@@ -15,12 +15,15 @@
 */
 $.fn.customSelect = function(op){
 	/**
-	 @property target
-	 @property trigger
-	 @property valueClass
-	 @property listClass
-	 @property display
-	 @property speed
+	 @property target {selector} [.js-selectCustomTarget] ターゲットselect要素
+	 @property trigger {selector} [.js-selectCustomTigger] リスト表示トリガー
+	 @property valueClass {selector} [.select-value] 値格納要素のclass
+	 @property listClass {selector} [.select-list] リスト格納要素のclass
+	 @property selectDesc {selector} [.select-desc] ラベルを設定したい場合にoption要素に付与するclass
+	 @property opLabel {string} [option-label] optgroup要素が存在する場合のラベルclass名
+	 @property isActive {string} [select-active] 選択状態のclass
+	 @property display {string} [show] リスト表示方法 show/slide/fade
+	 @property speed {number} [500] オプションdisplayでslide/fadeを指定した場合のアニメーションスピード
 	*/
 	op = $.extend({
 		target: ".js-selectCustomTarget",
