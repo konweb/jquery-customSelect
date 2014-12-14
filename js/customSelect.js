@@ -99,13 +99,15 @@ $.fn.customSelect = function(op){
 						$this.find(op.listClass).append(listLabel + "<ul>" + list + "</ul>");
 					});
 				}else{
+					var $target;
 					opNum = $this.find(op.target + " option").length;
 					for(i = 0;i < opNum;i++){
-						attr = $this.find(op.target + " option").eq(i).attr("class") ? $this.find(op.target + " option").eq(i).attr("class") : "";
+						$target = $this.find(op.target + " option").eq(i);
+						attr = $target.attr("class") ? $target.attr("class") : "";
 						if(i == selectIndex){
-							list += "<li class='" + op.isActive + " " + attr + "'>"+$this.find(op.target + " option:eq("+i+")").text()+"</li>";
+							list += "<li class='" + op.isActive + " " + attr + "'>"+$target.text()+"</li>";
 						}else{
-							list += "<li class='"+attr+"'>"+$this.find(op.target + " option:eq("+i+")").text()+"</li>";
+							list += "<li class='"+attr+"'>"+$target.text()+"</li>";
 						}
 					}
 					$this.find(op.listClass).append("<ul>" + list + "</ul>");
