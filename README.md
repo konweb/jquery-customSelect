@@ -25,21 +25,6 @@ Simple HTML
 ```
 <div class="select js-selectCustom">
 	<select name="select1" class="js-selectCustomTarget">
-		<option value="りんご" selected>りんご</option>
-		<option value="ばなな">ばなな</option>
-		<option value="オレンジ">オレンジ</option>
-		<option value="みかん">みかん</option>
-		<option value="ピーチ">ピーチ</option>
-	</select>
-	<i class="fa fa-angle-down js-selectCustomTigger"></i>
-</div><!-- select -->
-```
-
-
-Simple HTML
-```
-<div class="select js-selectCustom">
-	<select name="select1" class="js-selectCustomTarget">
 		<option value="" selected>りんご</option>
 		<option value="りんご">りんご</option>
 		<option value="ばなな">ばなな</option>
@@ -82,7 +67,7 @@ Also supports optgroup
 				<option value="カバ">カバ</option>
 			</optgroup>
 		</select>
-		<i class="fa fa-angle-down"></i>
+		<i class="fa fa-angle-down js-selectCustomTigger"></i>
 	</div><!-- select -->
 </div><!-- select -->
 ```
