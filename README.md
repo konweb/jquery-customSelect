@@ -3,6 +3,11 @@ jquery-customSelect
 
 MIT license. [example](http://konweb.github.io/jquery-customSelect/)
 
+## Installation
+```
+git clone https://github.com/konweb/jquery-customSelect/edit/master/README.md
+```
+
 ## How to use
 read the JS and CSS files
 
