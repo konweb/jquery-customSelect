@@ -9,8 +9,7 @@ git clone https://github.com/konweb/jquery-customSelect/edit/master/README.md
 ```
 
 ## How to use
-read the JS and CSS files
-
+**read the JS and CSS files**
 ```
 <link rel="stylesheet" href="./css/select.css">
 
@@ -18,15 +17,14 @@ read the JS and CSS files
 <script src="./js/customSelect.js"></script>
 ```
 
-run the plug -in
-
+**run the plug -in**
 ```
 $(function(){
 	$(".js-selectCustom").customSelect({});
 });
 ```
 
-Simple HTML
+**Simple HTML**
 ```
 <div class="select js-selectCustom">
 	<select name="select1" class="js-selectCustomTarget">
@@ -41,7 +39,7 @@ Simple HTML
 </div><!-- select -->
 ```
 
-HTML if you put a descriptive label
+**HTML if you put a descriptive label**
 ```
 <div class="select js-selectCustom">
 	<select name="select1" class="js-selectCustomTarget">
@@ -56,7 +54,7 @@ HTML if you put a descriptive label
 </div><!-- select -->
 ```
 
-Also supports optgroup
+**Also supports optgroup**
 ```
 <div class="section">
 	<div class="select js-selectCustom">
